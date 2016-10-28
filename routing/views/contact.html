@@ -1,1 +1,34 @@
-<h2>This is contact</h2>
+<h2> contact Us</h2>
+
+<div>
+<!-- creating form named contactform -->
+  <form name="contactform" class="contact" ng-submit="formSubmit()" novalidate>
+       <!-- entering firstname -->
+      <label class="form-label">First Name:</label>
+  	  <input type="text" name="userFirstName" ng-model="form.firstName" required /> 
+  	  <!-- validating firstname -->
+      	 <div class="invalid" ng-show="contactform.userFirstName.$touched&& contactform.userFirstName.$invalid">Please enter Firstname </div></br> </br>
+      <!-- entering lastname -->
+  	  <label class="form-label">Last Name:</label>
+      <input type="text" name="userLastName" ng-model="form.lastName" required />
+      <!-- validating lastname -->
+     	<div class="invalid" ng-show="contactform.userLastName.$touched&& contactform.userLastName.$invalid">Please enter Lastname </div></br> </br>
+      <!-- entering email -->
+     <label class="form-label">Email Address:</label>
+      
+     <input type="email" name="userEmail" ng-model="form.email" required />
+     <!-- validating email -->
+
+     <div class="invalid" ng-show="contactform.userEmail.$touched&& contactform.userEmail.$invalid">Please enter mail id </div>
+     <div class="invalid" ng-show="contactform.userEmail.$error.email">Invalid Email</div></br> </br>
+      <!-- entering phoneno -->
+    <label class="form-label">Phone Number:</label>
+    <input type="text" name="userPhoneNumber" ng-model="form.phoneNumber" required />
+      <!-- validating phoneno -->
+    	<div class="invalid" ng-show="contactform.userPhoneNumber.$touched&& contactform.userPhoneNumber.$invalid">Please enter Phonenumber </div></br>
+    	<!-- entering Address -->
+   <label class="form-label">Contact Address:</label>
+  <textarea type="text" name="userAddress" ng-model="form.address" required></textarea> </br></br>
+   <button type="submit">Submit</button>
+  </form>
+</div>
