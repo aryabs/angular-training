@@ -12,13 +12,16 @@
 .contact .form-label{
 	color: blue;
 }
+
 .contact input{
 	color: orange;
+
+/*.contact input{
+	color: blue;*/
+
 }
 .contact.invalid{
 	color: red;
 }
-
-
 
 
