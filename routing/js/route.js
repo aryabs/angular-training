@@ -13,5 +13,8 @@ app.config(function($routeProvider) {
         templateUrl : "views/contact.html",
         controller : "FormController"
     })
-    
+    .when("/contact listing", {
+        templateUrl : "views/contactlist.html",
+        controller : "FormListController"
+    })
 });
