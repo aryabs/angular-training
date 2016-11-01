@@ -1,18 +1,27 @@
+<!-- search bar -->
+</br><label >Search</label>
+ <input type="text" ng-model="search" class="form-control" placeholder="Search"> </br>
+<!-- dynamic table -->
 <table class="table" >
 <tr>
-    <th>Firstname
+<th>
+<a href="" ng-click="sort('firstName')">Firstname</a>
     </th>
-    <th>Lastname
+    <th><a href="" ng-click="sort('lastName')">Lastname</a>
     </th>
-    <th>Email id
+    <th ><a href="" ng-click="sort('email')">Email id</a>
+
     </th>
-     <th>Phone no
+     <th ><a href="" ng-click="sort('phoneNumber')">Phone no</a>
     </th>
-     <th>Address
+     <th >
+     <a href="" ng-click="sort('address')">Address</a>
     </th>
   </tr>
+     <!-- populating table -->
+     <tr ng-repeat="x in dataArray | orderBy:orderByField:reverseSort | filter:search  ">
+     
 
-     <tr ng-repeat="x in dataArray">
     <td>{{x.firstName}}
     </td>
     <td>{{x.lastName}}
