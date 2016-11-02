@@ -16,6 +16,10 @@ angular.module("myApp")
 		  	$scope.orderByField = param;	
 		  	$scope.reverseSort = !$scope.reverseSort;	
 	  	}
+        //removing row 
+	  	$scope.removeRow = function(index){				
+		$scope.dataArray.splice( index, 1 );		
+		};
 });
 // definition of titlecase filter
 angular.module("myApp").filter('titleCase', function() {

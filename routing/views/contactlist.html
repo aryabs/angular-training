@@ -9,13 +9,18 @@
           <th><a href="" ng-click="sort('email')">Email id</a></th>  
           <th><a href="" ng-click="sort('phoneNumber')">Phone no</a></th>  
           <th><a href="" ng-click="sort('address')">Address</a></th>
+          <th>Action</th>
+      </tr>
       </tr>
          <!-- populating table -->
       <tr ng-repeat="x in dataArray | orderBy:orderByField:reverseSort | filter:search">
-          <td>{{x.firstName | titleCase}}</td>
+          <td>{{x.firstName | titleCase}} </td>
           <td>{{x.lastName}}</td>
           <td>{{x.email}}</td>
           <td>{{x.phoneNumber}}</td>
           <td>{{x.address}}</td>
+          <td>
+    <input type="button" value="Remove" ng-click="removeRow($index)"/>
+    </td>
       </tr>
 </table> 
