@@ -22,7 +22,7 @@
      <tr ng-repeat="x in dataArray | orderBy:orderByField:reverseSort | filter:search  ">
      
 
-    <td>{{x.firstName}}
+    <td>{{x.firstName | titleCase}}
     </td>
     <td>{{x.lastName}}
     </td>
