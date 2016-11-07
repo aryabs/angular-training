@@ -1,26 +1,48 @@
-<!-- search bar -->
-</br><label >Search</label>
- <input type="text" ng-model="search" class="form-control" placeholder="Search"> </br>
+<div class="row">
+    <div class="col-md-12">
+      
+      <input type="text" ng-model="search" class="form-control" placeholder="Search"> 
+    </div>
+    <div class="col-md-6">
+    </div>
+</div>
+
+
+
 <!-- dynamic table -->
-<table class="table" >
-      <tr>
-          <th><a href="" ng-click="sort('firstName')">Firstname</a></th>
-          <th><a href="" ng-click="sort('lastName')">Lastname</a></th>  
-          <th><a href="" ng-click="sort('email')">Email id</a></th>  
-          <th><a href="" ng-click="sort('phoneNumber')">Phone no</a></th>  
-          <th><a href="" ng-click="sort('address')">Address</a></th>
-          <th>Action</th>
-      </tr>
-      </tr>
-         <!-- populating table -->
-      <tr ng-repeat="x in dataArray | orderBy:orderByField:reverseSort | filter:search">
-          <td>{{x.firstName | titleCase}} </td>
-          <td>{{x.lastName}}</td>
-          <td>{{x.email}}</td>
-          <td>{{x.phoneNumber}}</td>
-          <td>{{x.address}}</td>
-          <td>
-    <input type="button" value="Remove" ng-click="removeRow($index)"/>
-    </td>
-      </tr>
-</table> 
+ <!-- <div class="table-responsive"> -->
+ <div class="row">
+    <div class="col-md-12">
+      <div class="table-responsive">
+        <table class="table" >
+              <tr>
+                  <th><a href="" ng-click="sort('firstName')">Firstname</a></th>
+                  <th><a href="" ng-click="sort('lastName')">Lastname</a></th>  
+                  <th><a href="" ng-click="sort('email')">Email id</a></th>  
+                  <th><a href="" ng-click="sort('phoneNumber')">Phone no</a></th>  
+                  <th><a href="" ng-click="sort('address')">Address</a></th>
+                  <th>Action</th>
+                  <th>Link</th>
+
+              </tr>
+                 <!-- populating table -->
+              <tr ng-repeat="item in dataArray | orderBy:orderByField:reverseSort | filter:search">
+                  <td>{{item.firstName | titleCase}} </td>
+                  <td>{{item.lastName}}</td>
+                  <td>{{item.email}}</td>
+                  <td>{{item.phoneNumber}}</td>
+                  <td>{{item.address}}</td>
+
+                   <td><input type="button" value="Remove"class="btn btn-primary"
+                   ng-click="removeRow(item)"/></td>
+                   <!-- <td><a href="">Link </a></td>  -->
+                   <!-- <td> <contact-info dataarray="item.firstName"></contact-info></td> -->
+                   <td contact-info dataarray="{{item.firstName}} {{item.lastName}}" popover-placement="bottom" popover-label="Label"></td>
+
+              </tr>
+
+          </table>
+
+        </div>
+    </div>
+</div> 

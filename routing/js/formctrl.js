@@ -13,7 +13,7 @@ angular.module("myApp")
 		dataArray = dataArray ? JSON.parse(dataArray) : [];
 		dataArray.push(data);
 		localStorage.setItem('data',JSON.stringify(dataArray));
-		dataArray=JSON.stringify(dataArray);
+		// dataArray=JSON.stringify(dataArray);
 		var retrievedData= localStorage.getItem("data");
 		// console.log(dataArray);
 
