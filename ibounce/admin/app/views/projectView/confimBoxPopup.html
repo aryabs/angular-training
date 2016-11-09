@@ -1,0 +1,9 @@
+
+<div     class="ib-alert alertBox">
+    <button ng-click='closeConfirmBox()' aria-hidden="true" data-dismiss="modal" class="bootbox-close-button close" type="button" style="margin-top: -10px;">×</button>
+    <div class="modal-body">   {{confirmBoxMessage}}</div>
+    <div class="modal-footer">
+        <input type='button' value='OK' ng-click='submitConfirmBox()' class="alrt-btn btn-primary"  data-bb-handler="ok"> 
+        <input type='button' value='cancel' ng-click='closeConfirmBox()' class="alrt-btn btn-primary"  data-bb-handler="ok"> 
+    </div>   
+</div> 

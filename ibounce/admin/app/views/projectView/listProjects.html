@@ -1,0 +1,67 @@
+
+
+
+
+<div class=" container-fluid">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="contentBox">
+                <h4>My projects</h4>
+                <div class="row">
+                    <div class="col-sm-2"> 
+                        <a ng-click='createNewProject()'data-target="#createProject" data-toggle="modal" class="btn blue pull-left" href="" role="button">
+                            Add New Projects
+                        </a> </div>
+                    <div class="col-sm-2"> </div>
+                    <div class="col-sm-5"> </div>
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <div class="search-box">
+                                <input type="text" ng-model='searchProjects' placeholder="Search">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-3 animate" ng-repeat="projectDetail in projectDetails| filter: searchProjects" >
+                        <div  ng-class="{projectBoxEditonly : isSelected(projectDetail)}" class="content projectBox   project{{projectDetail.proid}}">
+                            <div class="boxHeading">
+
+                                <input type="text" ng-model='projectDetail.proname' ng-readonly="readOnly(projectDetail)" autofocus ng-class="{editOnlyTxtHeader : isSelected(projectDetail)}" class="textBoxProject viewOnlyTxtHeader ">
+                                <a href="" class="delete" ng-click='deleteProject(projectDetail)'></a>
+                                <a href="" class="edit" ng-class="{active : isSelected(projectDetail)}"  ng-click='editProject(projectDetail)'></a> 
+
+                            </div>
+                            <div class="form-vertical login-form">
+                                <div class="form-group">
+                                    <label for="firstname">Project URL</label>
+                                    <input type="text" ng-model="projectDetail.prourl" ng-class="{editOnlyTxt : isSelected(projectDetail)}"  ng-readonly="readOnly(projectDetail)" autofocus required placeholder="" class="viewOnlyTxt"> 
+
+                                </div>
+                                <div class="form-group">
+                                    <label for="firstname">Server URL</label>
+                                    <input type="text" ng-model="projectDetail.proserverurl" ng-class="{editOnlyTxt : isSelected(projectDetail)}" ng-readonly="readOnly(projectDetail)" autofocus required placeholder="" class="viewOnlyTxt">
+                                </div>
+                                <div ng-show='isSelected(projectDetail)' class="actionRow showSaveButton" >
+                                    <input type='button' class="saveBtn blue pull-right" ng-click='saveProjectDetails(projectDetail)' value='Save'  > 
+                                    <input type='button' class="cancelBtn blue pull-right" ng-click='cancelProjectDetails(projectDetail)' value='Cancel'  > 
+                                </div>
+                                <div ng-hide='isSelected(projectDetail)'  class="actionRow showOpenButton ">
+                                    <input type='button' class="btn blue pull-right" ng-click='showProjectDetails(projectDetail)' value='Open Project '  > 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+

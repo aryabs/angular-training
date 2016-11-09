@@ -1,0 +1,30 @@
+
+<div class="modal-dialog">
+    <div class="addModule-content pop-container">
+        <div class="modal-header">
+            <input  type='button' ng-click='closeNewProjectCreationPopup()' aria-label="Close" data-dismiss="modal" class="close" value='×'>
+
+            <h4 id="myModalLabel" class="modal-title">Create Module</h4>
+        </div>        
+        <div class="modal-body"> 
+            <div class="form-container">
+                <div ng-show='showModuleNameAvailability' class="alert-txt"> 
+                    {{availabiltyMsg}}
+                </div>
+                <form class="form-vertical login-form" name='createModuleForm'>
+                    <div class="form-group">
+                        <label for="firstname">Module Name</label>        
+                        <input type="text" ng-keyup="checkForAvilabilityOfModuleName(moduleName)"  ng-enter='submitCreateNewModule(moduleName)' ng-model='moduleName' autofocus required placeholder="" class="form-control">
+                    </div>
+
+                    <div class="actionRow">
+                        <input type='button'  ng-disabled='createModuleForm.$invalid || showModuleNameAvailability'  ng-click='submitCreateNewModule(moduleName)' value='Create Module' class="btn blue pull-right" > 
+                        <i class="m-icon-swapright m-icon-white"></i> 
+                    </div>
+                </form>
+            </div>
+        </div> 
+    </div>
+</div>
+
+

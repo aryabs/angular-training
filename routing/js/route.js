@@ -17,4 +17,8 @@ app.config(function($routeProvider) {
         templateUrl : "views/contactlist.html",
         controller : "FormListController"
     })
+    .when("/products", {
+        templateUrl : "views/products.html",
+        controller:"ProductController"
+    })
 });

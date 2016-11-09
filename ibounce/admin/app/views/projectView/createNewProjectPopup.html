@@ -1,0 +1,37 @@
+
+<div class="modal-dialog">
+    <div class="modal-content pop-container">
+        <div class="modal-header">
+            <input  type='button' ng-click='closeNewProjectCreationPopup()' aria-label="Close" data-dismiss="modal" class="close" value='×'>
+
+            <h4 id="myModalLabel" class="modal-title">Create project</h4>
+        </div>        
+        <div class="modal-body"> 
+            <div class="form-container" >
+                <div ng-show='showProjectAvailability' class="alert-txt"> 
+                    {{availabiltyMsg}}
+                </div>
+                <form class="form-vertical login-form" name='createProjectForm'>
+                    <div class="form-group">
+                        <label for="firstname">Project Name</label>        
+                        <input type="text"  ng-keyup="checkForAvilabilityOfProjectName(projectName)" ng-model='projectName' autofocus required placeholder="" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="firstname">Project URL</label>        
+                        <input type="text" ng-model='projectUrl' autofocus required placeholder="" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="firstname">Server URL</label>        
+                        <input type="text" ng-enter='submitCreateNewProjectdetails(projectName, projectUrl, projectServerUrl)' ng-model='projectServerUrl' autofocus required placeholder="" class="form-control">
+                    </div>
+                    <div class="actionRow">
+                        <input type='button' ng-disabled='createProjectForm.$invalid || showProjectAvailability ' ng-click='submitCreateNewProjectdetails(projectName, projectUrl, projectServerUrl)' value='Create Project' class="btn blue pull-right" > 
+                        <i class="m-icon-swapright m-icon-white"></i> 
+                    </div>
+                </form>
+            </div>
+        </div> 
+    </div>
+</div>
+
+

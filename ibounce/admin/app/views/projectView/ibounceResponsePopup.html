@@ -1,0 +1,26 @@
+
+<div class="modal-dialog">
+    <div class="addModule-content pop-container">
+        <div class="modal-header">
+            <input type="button" ng-click='closePopup()' class="close" value='×' >
+            <h4 class="modal-title" id="myModalLabel">Select Response Name</h4>
+        </div>  
+
+        <div class="modal-body">
+            <div class="form-container">
+                <form class="form-vertical login-form">
+                    <div class="form-group">
+                        <label for="firstname">Add Name</label>
+                        <input type="text" ng-model='serverRequestName' class="form-control" placeholder="" required="" autofocus="">
+                    </div>
+                    <div class="actionRow">
+                        <input type="button" ng-click='changeCommonRequestName(serverRequestName)' value='Save' class="btn blue pull-right">  <i class="m-icon-swapright m-icon-white"></i> 
+                    </div>
+                </form>
+            </div>     
+        </div> 
+
+    </div>
+</div>
+
+

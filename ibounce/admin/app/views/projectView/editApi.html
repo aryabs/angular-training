@@ -1,0 +1,160 @@
+
+
+
+
+
+
+
+<div class=" container-fluid">
+    <form  name='apiform'  class="form-horizontal rest-form" id="rest-form"> 
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="contentBox">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <h4>Request</h4>
+                        </div>
+                        <div class="col-sm-6">
+                            <a  href="" ng-click="backButton()" class="back-txt" ></a>
+                        </div>
+                    </div>
+                    <div class="requestRow">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="requestContent">
+
+                                    <div class="form-group">
+                                        <label class="col-lg-3 control-label" for="inputName">Display
+                                            Name</label>
+                                        <div class="col-lg-9">
+                                            <input type="text" ng-model='name' placeholder='name' required class="form-control tutorial"  >
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-lg-3 control-label" for="inputPath">Path</label>
+                                        <div class="col-lg-9">
+                                            <div class="input-group"> <span class="input-group-addon" id="pathBaseUrl">{{responseUrl}}</span>
+                                                <input type="text" ng-model='path' required placeholder='path'   class="form-control" >
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-lg-3 control-label" for="inputVerb">Verb</label>
+                                        <div id="verb-radios" class="col-lg-9 text-left verb-container">
+
+
+                                            <div ng-init="radioVerbselection" >
+                                                <label> <input type="radio" ng-model="radioVerbselection" value="1" ng-click="selectedRadioVerb('GET')">GET</label>
+                                                <label><input type="radio" ng-model="radioVerbselection" value="2" ng-click="selectedRadioVerb('POST')">POST</label>
+                                                <label> <input type="radio" ng-model="radioVerbselection" value="3" ng-click="selectedRadioVerb('PUT')">PUT</label>
+                                                <label> <input type="radio" ng-model="radioVerbselection" value="4" ng-click="selectedRadioVerb('PATCH')">PATCH</label>
+                                                <label> <input type="radio" ng-model="radioVerbselection" value="5" ng-click="selectedRadioVerb('DELETE')">DELETE</label>
+                                                <label> <input type="radio" ng-model="radioVerbselection" value="6" ng-click="selectedRadioVerb('OPTIONS')">OPTIONS</label>
+                                            </div>
+
+                                            <span class="info-txt">Select
+                                                the HTTP verb for
+                                                this mock. If you
+                                                select OPTIONS,
+                                                the CORS standard
+                                                will be disabled
+                                                for all mocks running
+                                                on the same path.</span> 
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="page-heading no-padng"><h1>Advanced Dispatch Option</h1>
+                                </div>
+
+                                <div class="collapse in advance-d">
+                                    <div class="form-right">
+                                        <label class="col-lg-3 control-label" for="inputConsumes">Consumes</label>
+                                        <div class="col-lg-9">
+                                            <div class="form-txt" >
+
+                                                <select class="form-control field-h" 
+                                                        data-ng-model='initialRequestContentType' 
+                                                        data-ng-options="contentType for contentType in requestcontentType"
+                                                        ng-change='getSelectedRequestContentType(initialRequestContentType)'>
+                                                </select> 
+                                            </div>
+                                            <span class="help-block">Activate
+                                                this mock if the
+                                                request HTTP header "Content-Type" matches
+                                                this value. */*
+                                                means accept all
+                                                values.</span> </div>
+                                    </div>
+                                    <div class="form-right">
+                                        <label class="col-lg-3 control-label" for="inputProduces">Produces</label>
+                                        <div class="col-lg-9">
+                                            <div class="form-txt">
+
+                                                <select class="form-control field-h" 
+                                                        data-ng-model='initialRequestContentEncoding' 
+                                                        data-ng-options="a for a in requestcontentEncoding"
+                                                        ng-click='getSelectedRequestContentEncoding(initialRequestContentEncoding)'>
+
+                                                </select>
+                                            </div>
+                                            <span class="help-block">Activate
+                                                this mock if the
+                                                request HTTP header "Accept" contains
+                                                this value. */*
+                                                means accept all
+                                                values.</span> </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <h4>Response</h4>
+                    <div class="requestRow">
+                        <div class="row">
+                            <div class="col-sm-2">
+                                <div class="actionBlock">
+                                    <a ng-click='addResponse()' href="" data-toggle="modal" data-target="#addResponse">
+                                        <span  class="addResponse"></span>
+                                        <span class="txt-btn">Add Response</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-sm-10">
+                                <div class="responses">
+                                    <div   data-ng-repeat="resp in response">
+                                        <span><input class='responseRadioButton{{resp.id}}' type="radio"  name="response" ng-click="selectedResponse(resp)"  /> </span>
+                                        <span ng-click="editClickedResponse(resp)">{{resp.statuscode}} {{resp.name}} </span>
+                                    </div> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="actionBtnRow">
+                        <div class="saveApi">
+                            <input ng-disabled="apiform.$invalid" value='Save' type='button' ng-click='saveApi()'  class="btn btn-default dropdown-toggle"> 
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+
+
+
+
+
+
+
+
+

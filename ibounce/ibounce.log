@@ -1,0 +1,199 @@
+2016-11-08 17:30:46 INFO  BounceEngine:87 - Initializing BounceEngine
+2016-11-08 17:30:46 INFO  BounceEngine:99 - BounceEngine Initialized successfully
+2016-11-08 17:30:49 INFO  BounceEngine:185 - Adding com.inapp.bounce.servlets.BounceServlet in context path /*
+2016-11-08 17:30:49 INFO  BounceEngine:185 - Adding com.inapp.bounce.servlets.New in context path /jgdjasd/*
+2016-11-08 17:30:49 INFO  BounceEngine:355 - Added HTTP Connector on port 8080
+2016-11-08 17:30:49 INFO  BounceEngine:356 - Added HTTPS Connector on port 8443
+2016-11-08 17:30:49 INFO  BounceEngine:357 - Added SPDY Connector on port 8443
+2016-11-08 17:30:49 INFO  BounceEngine:231 - Added jersey container
+2016-11-08 17:30:49 INFO  DBconfig:22 - connection url : jdbc:sqlite:iBounce.db
+2016-11-08 17:30:49 INFO  ConnectionPool:104 - Loading Driver
+2016-11-08 17:30:49 INFO  ConnectionPool:67 - Creating connections
+2016-11-08 17:30:49 INFO  ConnectionPool:169 - CLEANUP : Available Connections : 9
+2016-11-08 17:30:49 INFO  BounceEngine:432 - Table created in db iBounce.
+2016-11-08 17:30:49 INFO  BounceEngine:434 - Inserted the default user with username : admin and password : admin.
+2016-11-08 17:31:08 INFO  RequestManager:13 - GET /favicon.ico
+2016-11-08 17:31:08 INFO  ResponseManager:28 - GET /favicon.ico
+2016-11-08 17:31:08 INFO  ResponseManager:57 - Response Body -- 
+2016-11-08 17:31:08 INFO  ResponseManager:58 - Response Header -- {}
+2016-11-08 17:31:08 INFO  ResponseManager:119 - Server could not find the response, so generating 404
+2016-11-08 17:31:16 INFO  AuthenticatinFilter:37 - Entering into Authentication filter
+2016-11-08 17:31:16 INFO  AuthenticatinFilter:46 - Allowing LOGIN and LOGOUT
+2016-11-08 17:31:16 INFO  UserAuthenticationController:38 - --------------------login---------------------------------
+2016-11-08 17:31:16 INFO  UserAuthenticationController:60 - You are successfully logged in
+2016-11-08 17:31:16 INFO  CORSFilter:18 - Adding CORS headers in resposne
+2016-11-08 17:31:16 INFO  AuthenticatinFilter:37 - Entering into Authentication filter
+2016-11-08 17:31:16 INFO  AuthenticatinFilter:52 - Authentication Success
+2016-11-08 17:31:16 INFO  CORSFilter:18 - Adding CORS headers in resposne
+2016-11-08 17:31:42 INFO  AuthenticatinFilter:37 - Entering into Authentication filter
+2016-11-08 17:31:42 INFO  AuthenticatinFilter:52 - Authentication Success
+2016-11-08 17:31:42 INFO  ProjectController:45 - ------------------------createProject----------------------------
+2016-11-08 17:31:42 INFO  ProjectDao:51 - createProjectSql : insert into project(proj_name,proj_url,proj_createdBy, proj_server_url )values( 'MEP','localhost', '1' , 'localhost')
+2016-11-08 17:31:42 INFO  ProjectController:70 - The project MEP has been successfully created .
+2016-11-08 17:31:42 INFO  CORSFilter:18 - Adding CORS headers in resposne
+2016-11-08 17:31:42 INFO  AuthenticatinFilter:37 - Entering into Authentication filter
+2016-11-08 17:31:42 INFO  AuthenticatinFilter:52 - Authentication Success
+2016-11-08 17:31:42 INFO  CORSFilter:18 - Adding CORS headers in resposne
+2016-11-08 17:31:45 INFO  AuthenticatinFilter:37 - Entering into Authentication filter
+2016-11-08 17:31:45 INFO  AuthenticatinFilter:52 - Authentication Success
+2016-11-08 17:31:45 INFO  CORSFilter:18 - Adding CORS headers in resposne
+2016-11-08 17:31:45 INFO  AuthenticatinFilter:37 - Entering into Authentication filter
+2016-11-08 17:31:45 INFO  AuthenticatinFilter:52 - Authentication Success
+2016-11-08 17:31:45 INFO  CORSFilter:18 - Adding CORS headers in resposne
+2016-11-08 17:31:46 INFO  AuthenticatinFilter:37 - Entering into Authentication filter
+2016-11-08 17:31:46 INFO  AuthenticatinFilter:52 - Authentication Success
+2016-11-08 17:31:46 INFO  AdminController:402 - --------------------/getMaster------------------
+2016-11-08 17:31:46 INFO  CORSFilter:18 - Adding CORS headers in resposne
+2016-11-08 17:31:55 INFO  AuthenticatinFilter:37 - Entering into Authentication filter
+2016-11-08 17:31:55 INFO  AuthenticatinFilter:52 - Authentication Success
+2016-11-08 17:31:55 INFO  CORSFilter:18 - Adding CORS headers in resposne
+2016-11-08 17:31:55 INFO  AuthenticatinFilter:37 - Entering into Authentication filter
+2016-11-08 17:31:55 INFO  AuthenticatinFilter:52 - Authentication Success
+2016-11-08 17:31:55 INFO  CORSFilter:18 - Adding CORS headers in resposne
+2016-11-08 17:32:02 INFO  AuthenticatinFilter:37 - Entering into Authentication filter
+2016-11-08 17:32:02 INFO  AuthenticatinFilter:52 - Authentication Success
+2016-11-08 17:32:02 INFO  CORSFilter:18 - Adding CORS headers in resposne
+2016-11-08 17:32:21 INFO  AuthenticatinFilter:37 - Entering into Authentication filter
+2016-11-08 17:32:21 INFO  AuthenticatinFilter:52 - Authentication Success
+2016-11-08 17:32:21 INFO  ProjectDao:102 - updateProjectSql : update project set proj_name = 'MEP'   , proj_url = 'angular' , proj_createdBy = '1' , proj_server_url = 'localhost'  where proj_id='1'
+2016-11-08 17:32:21 INFO  CORSFilter:18 - Adding CORS headers in resposne
+2016-11-08 17:32:21 INFO  AuthenticatinFilter:37 - Entering into Authentication filter
+2016-11-08 17:32:21 INFO  AuthenticatinFilter:52 - Authentication Success
+2016-11-08 17:32:21 INFO  CORSFilter:18 - Adding CORS headers in resposne
+2016-11-08 17:32:22 INFO  AuthenticatinFilter:37 - Entering into Authentication filter
+2016-11-08 17:32:22 INFO  AuthenticatinFilter:52 - Authentication Success
+2016-11-08 17:32:22 INFO  CORSFilter:18 - Adding CORS headers in resposne
+2016-11-08 17:32:22 INFO  AuthenticatinFilter:37 - Entering into Authentication filter
+2016-11-08 17:32:22 INFO  AuthenticatinFilter:52 - Authentication Success
+2016-11-08 17:32:22 INFO  CORSFilter:18 - Adding CORS headers in resposne
+2016-11-08 17:32:24 INFO  AuthenticatinFilter:37 - Entering into Authentication filter
+2016-11-08 17:32:24 INFO  AuthenticatinFilter:52 - Authentication Success
+2016-11-08 17:32:24 INFO  AdminController:402 - --------------------/getMaster------------------
+2016-11-08 17:32:24 INFO  CORSFilter:18 - Adding CORS headers in resposne
+2016-11-08 17:33:36 INFO  AuthenticatinFilter:37 - Entering into Authentication filter
+2016-11-08 17:33:36 INFO  AuthenticatinFilter:52 - Authentication Success
+2016-11-08 17:33:36 INFO  AdminController:42 - --------------------/add (Multiple Request)------------------
+2016-11-08 17:33:36 INFO  IBounceDAO:266 - isBypass  : true
+2016-11-08 17:33:36 INFO  IBounceDAO:266 - isBypass  : false
+2016-11-08 17:33:36 INFO  IBounceDAO:301 - add commit : 1
+2016-11-08 17:33:36 INFO  CORSFilter:18 - Adding CORS headers in resposne
+2016-11-08 17:33:36 INFO  AuthenticatinFilter:37 - Entering into Authentication filter
+2016-11-08 17:33:36 INFO  AuthenticatinFilter:52 - Authentication Success
+2016-11-08 17:33:36 INFO  CORSFilter:18 - Adding CORS headers in resposne
+2016-11-08 17:33:36 INFO  AuthenticatinFilter:37 - Entering into Authentication filter
+2016-11-08 17:33:36 INFO  AuthenticatinFilter:52 - Authentication Success
+2016-11-08 17:33:36 INFO  CORSFilter:18 - Adding CORS headers in resposne
+2016-11-08 17:33:39 INFO  RequestManager:13 - GET /angular/login
+2016-11-08 17:33:39 INFO  ResponseManager:28 - GET /angular/login
+2016-11-08 17:33:39 INFO  ResponseManager:57 - Response Body -- Success
+2016-11-08 17:33:39 INFO  ResponseManager:58 - Response Header -- {Accept=UTF-8, Content-Type=application/json}
+2016-11-08 17:33:53 INFO  AuthenticatinFilter:37 - Entering into Authentication filter
+2016-11-08 17:33:53 INFO  AuthenticatinFilter:52 - Authentication Success
+2016-11-08 17:33:53 INFO  AdminController:402 - --------------------/getMaster------------------
+2016-11-08 17:33:53 INFO  CORSFilter:18 - Adding CORS headers in resposne
+2016-11-08 17:33:53 INFO  AuthenticatinFilter:37 - Entering into Authentication filter
+2016-11-08 17:33:53 INFO  AuthenticatinFilter:52 - Authentication Success
+2016-11-08 17:33:53 INFO  AdminController:421 - --------------------/getRequestDetails/1------------------
+2016-11-08 17:33:53 INFO  IBounceDAO:484 - get details:: [{request={path=login, method=GET, displayname=login, header={Accept=UTF-8, Content-Type=application/json}, row=, enabled=1}}, {responses=[{statuscode=From server, isBypass=true, serverurl=localhost, res_id=1, name=From Server, header={additionalHeader=[]}, body=java.lang.Object@7cd8ffe9, enabled=0}, {statuscode=200 - OK, isBypass=false, serverurl=null, res_id=2, name=Success, header={Accept=UTF-8, additionalHeader=[], Content-Type=application/json}, body=Success, enabled=1}]}]
+2016-11-08 17:33:53 INFO  CORSFilter:18 - Adding CORS headers in resposne
+2016-11-08 17:34:36 INFO  AuthenticatinFilter:37 - Entering into Authentication filter
+2016-11-08 17:34:36 INFO  AuthenticatinFilter:52 - Authentication Success
+2016-11-08 17:34:36 INFO  AdminController:402 - --------------------/getMaster------------------
+2016-11-08 17:34:36 INFO  CORSFilter:18 - Adding CORS headers in resposne
+2016-11-08 17:34:36 INFO  AuthenticatinFilter:37 - Entering into Authentication filter
+2016-11-08 17:34:36 INFO  AuthenticatinFilter:52 - Authentication Success
+2016-11-08 17:34:36 INFO  AdminController:421 - --------------------/getRequestDetails/1------------------
+2016-11-08 17:34:36 INFO  IBounceDAO:484 - get details:: [{request={path=login, method=GET, displayname=login, header={Accept=UTF-8, Content-Type=application/json}, row=, enabled=1}}, {responses=[{statuscode=From server, isBypass=true, serverurl=localhost, res_id=1, name=From Server, header={additionalHeader=[]}, body=java.lang.Object@7cd8ffe9, enabled=0}, {statuscode=200 - OK, isBypass=false, serverurl=null, res_id=2, name=Success, header={Accept=UTF-8, additionalHeader=[], Content-Type=application/json}, body=Success, enabled=1}]}]
+2016-11-08 17:34:36 INFO  CORSFilter:18 - Adding CORS headers in resposne
+2016-11-08 17:34:41 INFO  AuthenticatinFilter:37 - Entering into Authentication filter
+2016-11-08 17:34:41 INFO  AuthenticatinFilter:52 - Authentication Success
+2016-11-08 17:34:41 INFO  CORSFilter:18 - Adding CORS headers in resposne
+2016-11-08 17:34:41 INFO  AuthenticatinFilter:37 - Entering into Authentication filter
+2016-11-08 17:34:41 INFO  AuthenticatinFilter:52 - Authentication Success
+2016-11-08 17:34:41 INFO  CORSFilter:18 - Adding CORS headers in resposne
+2016-11-08 17:34:43 INFO  AuthenticatinFilter:37 - Entering into Authentication filter
+2016-11-08 17:34:43 INFO  AuthenticatinFilter:52 - Authentication Success
+2016-11-08 17:34:43 INFO  AdminController:402 - --------------------/getMaster------------------
+2016-11-08 17:34:43 INFO  CORSFilter:18 - Adding CORS headers in resposne
+2016-11-08 17:34:43 INFO  AuthenticatinFilter:37 - Entering into Authentication filter
+2016-11-08 17:34:43 INFO  AuthenticatinFilter:52 - Authentication Success
+2016-11-08 17:34:43 INFO  AdminController:421 - --------------------/getRequestDetails/1------------------
+2016-11-08 17:34:43 INFO  IBounceDAO:484 - get details:: [{request={path=login, method=GET, displayname=login, header={Accept=UTF-8, Content-Type=application/json}, row=, enabled=1}}, {responses=[{statuscode=From server, isBypass=true, serverurl=localhost, res_id=1, name=From Server, header={additionalHeader=[]}, body=java.lang.Object@7cd8ffe9, enabled=0}, {statuscode=200 - OK, isBypass=false, serverurl=null, res_id=2, name=Success, header={Accept=UTF-8, additionalHeader=[], Content-Type=application/json}, body=Success, enabled=1}]}]
+2016-11-08 17:34:43 INFO  CORSFilter:18 - Adding CORS headers in resposne
+2016-11-08 17:35:00 INFO  AuthenticatinFilter:37 - Entering into Authentication filter
+2016-11-08 17:35:00 INFO  AuthenticatinFilter:52 - Authentication Success
+2016-11-08 17:35:00 INFO  AdminController:204 - ********** editing the commandss***************
+2016-11-08 17:35:00 INFO  AdminController:205 - input:{"project":{"projectid":"1","serverurl":"localhost"},"request":{"moduleid":"0","displayname":"login","path":"login","method":"GET","body":{},"header":{"Content-Type":"application/json","Accept":"UTF-8"},"api_id":"1"},"responses":[{"isActive":false,"isBypass":true,"serverurl":"localhost","name":"From Server"},{"isActive":true,"isBypass":false,"serverurl":"localhost","name":"Success","statuscode":"200 - OK","body":{"contents":"Success"},"header":{"Content-Type":"application/json","Accept":"UTF-8"}},{"isActive":false,"isBypass":false,"serverurl":"localhost","name":"Unauthorized","statuscode":"401 - Unauthorized","body":{"contents":""},"header":{"Content-Type":"*/*","Accept":"UTF-8"}}]}
+2016-11-08 17:35:00 INFO  IBounceDAO:266 - isBypass  : true
+2016-11-08 17:35:00 INFO  IBounceDAO:266 - isBypass  : false
+2016-11-08 17:35:00 INFO  IBounceDAO:266 - isBypass  : false
+2016-11-08 17:35:01 INFO  IBounceDAO:301 - add commit : 1
+2016-11-08 17:35:01 INFO  CORSFilter:18 - Adding CORS headers in resposne
+2016-11-08 17:35:01 INFO  AuthenticatinFilter:37 - Entering into Authentication filter
+2016-11-08 17:35:01 INFO  AuthenticatinFilter:52 - Authentication Success
+2016-11-08 17:35:01 INFO  CORSFilter:18 - Adding CORS headers in resposne
+2016-11-08 17:35:01 INFO  AuthenticatinFilter:37 - Entering into Authentication filter
+2016-11-08 17:35:01 INFO  AuthenticatinFilter:52 - Authentication Success
+2016-11-08 17:35:01 INFO  CORSFilter:18 - Adding CORS headers in resposne
+2016-11-08 17:35:02 INFO  AuthenticatinFilter:37 - Entering into Authentication filter
+2016-11-08 17:35:02 INFO  AuthenticatinFilter:52 - Authentication Success
+2016-11-08 17:35:02 INFO  AdminController:402 - --------------------/getMaster------------------
+2016-11-08 17:35:02 INFO  CORSFilter:18 - Adding CORS headers in resposne
+2016-11-08 17:35:02 INFO  AuthenticatinFilter:37 - Entering into Authentication filter
+2016-11-08 17:35:02 INFO  AuthenticatinFilter:52 - Authentication Success
+2016-11-08 17:35:02 INFO  AdminController:421 - --------------------/getRequestDetails/2------------------
+2016-11-08 17:35:02 INFO  IBounceDAO:484 - get details:: [{request={path=login, method=GET, displayname=login, header={Accept=UTF-8, Content-Type=application/json}, row=, enabled=1}}, {responses=[{statuscode=From server, isBypass=true, serverurl=localhost, res_id=3, name=From Server, header={additionalHeader=[]}, body=java.lang.Object@1a088707, enabled=0}, {statuscode=200 - OK, isBypass=false, serverurl=null, res_id=4, name=Success, header={Accept=UTF-8, additionalHeader=[], Content-Type=application/json}, body=Success, enabled=1}, {statuscode=401 - Unauthorized, isBypass=false, serverurl=null, res_id=5, name=Unauthorized, header={Accept=UTF-8, additionalHeader=[], Content-Type=*/*}, body=, enabled=0}]}]
+2016-11-08 17:35:02 INFO  CORSFilter:18 - Adding CORS headers in resposne
+2016-11-08 17:35:04 INFO  AuthenticatinFilter:37 - Entering into Authentication filter
+2016-11-08 17:35:04 INFO  AuthenticatinFilter:52 - Authentication Success
+2016-11-08 17:35:04 INFO  AdminController:204 - ********** editing the commandss***************
+2016-11-08 17:35:04 INFO  AdminController:205 - input:{"project":{"projectid":"1","serverurl":"localhost"},"request":{"moduleid":"0","displayname":"login","path":"login","method":"GET","body":{},"header":{"Content-Type":"application/json","Accept":"UTF-8"},"api_id":"2"},"responses":[{"isActive":false,"isBypass":true,"serverurl":"localhost","name":"From Server"},{"isActive":false,"isBypass":false,"serverurl":"localhost","name":"Success","statuscode":"200 - OK","body":{"contents":"Success"},"header":{"Content-Type":"application/json","Accept":"UTF-8"}},{"isActive":true,"isBypass":false,"serverurl":"localhost","name":"Unauthorized","statuscode":"401 - Unauthorized","body":{"contents":""},"header":{"Content-Type":"*/*","Accept":"UTF-8"}}]}
+2016-11-08 17:35:04 INFO  IBounceDAO:266 - isBypass  : true
+2016-11-08 17:35:04 INFO  IBounceDAO:266 - isBypass  : false
+2016-11-08 17:35:05 INFO  IBounceDAO:266 - isBypass  : false
+2016-11-08 17:35:05 INFO  IBounceDAO:301 - add commit : 1
+2016-11-08 17:35:05 INFO  CORSFilter:18 - Adding CORS headers in resposne
+2016-11-08 17:35:05 INFO  AuthenticatinFilter:37 - Entering into Authentication filter
+2016-11-08 17:35:05 INFO  AuthenticatinFilter:52 - Authentication Success
+2016-11-08 17:35:05 INFO  CORSFilter:18 - Adding CORS headers in resposne
+2016-11-08 17:35:05 INFO  AuthenticatinFilter:37 - Entering into Authentication filter
+2016-11-08 17:35:05 INFO  AuthenticatinFilter:52 - Authentication Success
+2016-11-08 17:35:05 INFO  CORSFilter:18 - Adding CORS headers in resposne
+2016-11-08 17:35:07 INFO  RequestManager:13 - GET /angular/login
+2016-11-08 17:35:07 INFO  ResponseManager:28 - GET /angular/login
+2016-11-08 17:35:07 INFO  ResponseManager:57 - Response Body -- 
+2016-11-08 17:35:07 INFO  ResponseManager:58 - Response Header -- {Accept=UTF-8, Content-Type=*/*}
+2016-11-08 17:35:11 INFO  RequestManager:13 - GET /angular/login
+2016-11-08 17:35:11 INFO  ResponseManager:28 - GET /angular/login
+2016-11-08 17:35:11 INFO  ResponseManager:57 - Response Body -- 
+2016-11-08 17:35:11 INFO  ResponseManager:58 - Response Header -- {Accept=UTF-8, Content-Type=*/*}
+2016-11-08 18:08:09 INFO  AuthenticatinFilter:37 - Entering into Authentication filter
+2016-11-08 18:08:09 INFO  AuthenticatinFilter:52 - Authentication Success
+2016-11-08 18:08:09 INFO  CORSFilter:18 - Adding CORS headers in resposne
+2016-11-08 18:08:09 INFO  AuthenticatinFilter:37 - Entering into Authentication filter
+2016-11-08 18:08:09 INFO  AuthenticatinFilter:52 - Authentication Success
+2016-11-08 18:08:09 INFO  CORSFilter:18 - Adding CORS headers in resposne
+2016-11-08 18:08:43 INFO  AuthenticatinFilter:37 - Entering into Authentication filter
+2016-11-08 18:08:43 INFO  AuthenticatinFilter:52 - Authentication Success
+2016-11-08 18:08:43 INFO  AdminController:554 - --------------------changeresponse/3, 6------------------
+2016-11-08 18:08:43 INFO  CORSFilter:18 - Adding CORS headers in resposne
+2016-11-08 18:08:44 INFO  AuthenticatinFilter:37 - Entering into Authentication filter
+2016-11-08 18:08:44 INFO  AuthenticatinFilter:52 - Authentication Success
+2016-11-08 18:08:44 INFO  CORSFilter:18 - Adding CORS headers in resposne
+2016-11-08 18:08:44 INFO  AuthenticatinFilter:37 - Entering into Authentication filter
+2016-11-08 18:08:44 INFO  AuthenticatinFilter:52 - Authentication Success
+2016-11-08 18:08:44 INFO  CORSFilter:18 - Adding CORS headers in resposne
+2016-11-08 18:15:09 INFO  AuthenticatinFilter:37 - Entering into Authentication filter
+2016-11-08 18:15:09 INFO  AuthenticatinFilter:52 - Authentication Success
+2016-11-08 18:15:09 INFO  CORSFilter:18 - Adding CORS headers in resposne
+2016-11-08 18:15:09 INFO  AuthenticatinFilter:37 - Entering into Authentication filter
+2016-11-08 18:15:09 INFO  AuthenticatinFilter:52 - Authentication Success
+2016-11-08 18:15:09 INFO  CORSFilter:18 - Adding CORS headers in resposne
+2016-11-08 18:30:49 INFO  ConnectionPool:169 - CLEANUP : Available Connections : 1
+2016-11-08 18:31:36 INFO  AuthenticatinFilter:37 - Entering into Authentication filter
+2016-11-08 18:31:36 INFO  AuthenticatinFilter:46 - Allowing LOGIN and LOGOUT
+2016-11-08 18:31:36 INFO  UserAuthenticationController:81 - --------------------logout---------------------------------
+2016-11-08 18:31:36 INFO  UserAuthenticationController:87 - You are successfully logged out!
+2016-11-08 18:31:36 INFO  CORSFilter:18 - Adding CORS headers in resposne
+2016-11-08 19:30:03 INFO  StopProcessThread:11 - Executing shutdown hook thread
+2016-11-08 19:30:03 INFO  StopProcessThread:13 - Closing traffic logger file

@@ -1,0 +1,104 @@
+<div class="modal-dialog responseContainer">
+    <div class="modal-content pop-container">
+        <div class="modal-header">
+            <input type="button" ng-click='closePopup()' class="close" value='×' >
+            <h4 class="modal-title" id="myModalLabel">Add Response</h4>
+        </div>
+        <div class="modal-body">
+            <div class="form-container no-padng">
+
+                <form name='responseForm' class="form-horizontal rest-form" id="rest-form">
+                    <div class="row mr-botttom">
+                        <div class="col-lg-6">
+
+                            <select class="form-control field-h" 
+                                    data-ng-model='InitialResponseStatus' 
+                                    data-ng-options="a for a in responseStatus"
+                                    ng-change='getSelectedResponseStatus(InitialResponseStatus)'>
+                            </select> 
+                        </div>
+                        <div class="col-sm-1">
+                            <div class="link-icon"><img src="images/link.png"></div>
+                        </div>
+                        <div class="col-lg-5">
+                            <input type="text" placeholder="Custom response name" ng-model="responseName" required class="form-control  " id="email" name="email">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <label class="control-label" for="inputPath">Content type</label>
+
+                            <select class="form-control field-h" 
+                                    data-ng-model='initialResponseContentType' 
+                                    data-ng-options="a for a in requestcontentType"
+                                    ng-change='getSelectedResponseContentType(initialResponseContentType)'>
+
+                            </select> 
+
+                            <span class="help-block">Content -Type header for respone</span>
+                        </div>
+                        <div class="col-sm-6">
+                            <label class="control-label" for="inputPath">Content Encoding</label>
+
+                            <select class="form-control field-h" 
+                                    data-ng-model='initialResponseContentEncoding' 
+                                    data-ng-options="a for a in requestcontentEncoding"
+                                    ng-change='initialResponseContentEncoding(a)'>
+
+                            </select>
+                            <span class="help-block">Content -Encoding header for respone</span>
+                        </div>
+                    </div>
+
+                    <div class="addHeaders">
+                        <div class="buttonRow" ng-click="showAdditionalHeaders()">
+                            <a href="" class="pull-right actionBlock"><span class="addResponse"></span><span class="txt-btn">Additional headers</span></a>
+                        </div>
+                        <div ng-show='showHeaderNameAvailability' class="alert-txt"> 
+                            {{availabiltyMsg}}
+                        </div>
+                        <div ng-show='showHeaderValueAvailability' class="alert-txt"> 
+                            {{availabiltyHeaderValueMsg}}
+                        </div>
+                        <div ng-show="additionalHeaders" class="headerfieldRow">
+                            <div ng-repeat="header in responseHeaders" class="rowRepeat">
+                                <div class="addHeadClose"><a href="" class="glyphicon glyphicon-trash" ng-click="removeHeader(header)"></a></div>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <input type="text" required ng-keyup="checkForAvilabilityOfHeaderName(header.headerName)"  placeholder="Add Header Name" ng-model="header.headerName" class="form-control " >
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <input type="text" required ng-keyup="checkForAvilabilityOfHeaderValue(header.headerValue)"  placeholder="Add Header Value" ng-model="header.headerValue" class="form-control" >
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <label for="inputPath" class="control-label">Response body</label>
+                            <div class="body-group">
+                                <textarea ng-keyup="checkForJsonValidity(responseContent)" class="form-control" rows="3" ng-model='responseContent'>
+                                    
+                                </textarea>
+                                <!--<input type="text" ng-model='responseBody'>-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row-margin">
+                        <div class="actionBtnRow">
+                            <div class="">
+                                <input type='button'  ng-disabled="responseForm.$invalid || showHeaderNameAvailability || showHeaderValueAvailability" ng-click='createOrUpdateResponse(responseContent, responseName, responseHeaders)' value='Save' class="btn btn-default"> 
+                            </div>
+                        </div>                
+                    </div>
+                </form>
+            </div>
+
+
+
+
+        </div>
+    </div>
+</div>

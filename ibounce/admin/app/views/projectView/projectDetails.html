@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+
+
+
+    <div class=" container-fluid ">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="contentBox">
+                    <div class="row">
+                        <div class="col-sm-8">
+                            <div class="headText" > {{projectName}} </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="row">
+                                <div class="col-sm-10">
+                                    <div class="form-group">
+                                        <div class="search-box">
+                                            <input type="text" ng-model='SearchModuleOrApi' placeholder="Search">
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-2">
+                                    <a  href="" ng-click="backButton()" class="back-txt" ></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <div class="rowHeading">
+                                <div class="row">
+                                    <div class="col-sm-12">
+
+                                        <input type='button' ng-click='createNewModule()' class='btn blue pull-left' value='Create New Module'>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div  class="col-sm-12" >
+
+                                    <div ng-class="{mpActive : selectedModule(moduleDetail)}"   class="modulePanel animate" ng-repeat='moduleDetail in moduleDetails| filter:SearchModuleOrApi'> 
+                                        <div ng-class="{moduleEditOnly : isSelected(moduleDetail)}" class='module{{moduleDetail.moduleid}}'>
+                                            <span ng-click='openModule(moduleDetail)' class="moduleClick">
+                                                <span ng-class="{active : selectedModule(moduleDetail)}" class="folder"></span>
+                                                <input name="" type="text" ng-readonly="readOnly(moduleDetail)" ng-class="{editOnlyTxtHeader : isSelected(moduleDetail)}" class="textBoxModule" ng-model='moduleDetail.modulename'>
+                                            </span>
+                                            <ul class="moduleIcons">
+                                                <li ng-show='isSelected(moduleDetail)' class="first  updateModuleButtonWrapper" > 
+                                                    <span class="save" ng-click='updateModule(moduleDetail)'></span>
+                                                    <span class="cancel" ng-click='cancelModule(moduleDetail)'></span>
+
+                                                </li> 
+
+                                                <li ng-hide='isSelected(moduleDetail)' class=' editModuleButtonWrapper'><span  ng-click='editModuleName(moduleDetail)' class="edit"></span></li>
+                                                <li ng-hide='hideDeleteIcon(moduleDetail)' class="last"> <span class="delete" ng-click="deleteModule(moduleDetail)"></span></li>
+                                            </ul> 
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+                        <div class="col-sm-9">
+                            <div ng-if='loadApiDetails' class="apiContainer">
+                                <div class="rowHeading">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <a role="button" ng-click='createNewApi()' href="" class="btnBlue blue pull-left">Add New API</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+
+
+                                <div class="row">
+
+                                    <div class="col-sm-4 rowMargin animate" ng-repeat='api in apis| filter:SearchModuleOrApi'>
+                                        <div  class="contentApi projectBox " >
+                                            <div class="boxHeading">
+                                                <h3>{{api.req_name}}</h3>
+                                                <a href="" class="delete" ng-click='deleteApi(api)'></a>
+                                                <a href="" class="edit" ng-click="editApiDetails(api)"></a> </div>
+                                            <form class="form-vertical login-form">
+                                                <div class="form-group">
+                                                    <select class='form-control field-h' ng-change='selectBoxValueChanged(api.selectedRequest)'  
+                                                            ng-model="api.selectedRequest.res_statuscode" 
+                                                            ng-options="response.res_statuscode as response.res_statuscode for response in api.responses">
+                                                    </select> 
+                                                </div>
+                                                <div class="form-group">
+                                                    <input type="text" readonly ng-model='api.req_path' autofocus required placeholder="Path" class="form-control">
+                                                </div>
+                                                <div class="form-group">
+                                                    <input type="text" readonly ng-model='api.req_method' autofocus required placeholder="Verb" class="form-control">
+                                                </div> 
+
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+</html>

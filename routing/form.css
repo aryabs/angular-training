@@ -35,3 +35,11 @@
     border-collapse: collapse;
     width: 100%;
 }
+
+.fieldset fieldset{
+    margin:0 70px;   
+}
+fieldset {
+    border: 0;
+border-bottom: 1px solid #e5e5e5;
+}
