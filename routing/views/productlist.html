@@ -1,0 +1,23 @@
+<div class="row">
+    <div class="col-md-12">
+      <div class="table-responsive">
+        <table class="table" >
+              <tr>
+                  <th>Product name</th>
+                  <th>Category</th>  
+                  <th>Subcategory</th>  
+                  <th>User</th>  
+              </tr>
+<tr ng-repeat="item in tableArray">
+                  <td>{{item.productname}} </td>
+                  <td>{{item.category.type}}</td>
+                  <td>{{item.subcategory.subtype}}</td>
+                  <!-- <td>user</td> -->
+                  <td contact-info dataarray="{{item.selectuser.firstName}} {{item.selectuser.lastName}} {{item.selectuser.phoneNumber}}" popover-placement="bottom" popover-label="view user"></td>
+
+                  
+
+              </table>
+              </div>
+              </div>
+              </div>

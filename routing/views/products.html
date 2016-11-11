@@ -1,10 +1,11 @@
 <h2>Products</h2>
-<form >
+<form name="productform" ng-submit="productformSubmit()">
 <div class="container">
 	<div class="form-group">
 	  <label class="col-md-4 control-label" for="textinput">Product name</label>  
 	 	 <div class="col-md-4">
-	  			<input id="textinput" name="textinput" type="text" placeholder="Enter a product name" ng-model="productname" class="form-control input-md">
+	  			<input id="textinput" name="textinput" type="text" placeholder="Enter a product name" ng-model="form.productname" class="form-control input-md" required  >
+	  			
 	    
 		 </div>
  	 </div>
@@ -13,7 +14,7 @@
  	  <div class="form-group">
   			<label class="col-md-4 control-label" for="selectbasic">Category</label>
   	  <div class="col-md-4">
-            <select id="selectbasic" name="selectbasic" class="form-control" ng-model="category" ng-options="user.type for user in categoryArray" ng-change="search()">
+            <select id="selectbasic" name="selectbasic" class="form-control" ng-model="form.category" ng-options="user.type for user in categoryArray" ng-change="search()" >
             <option value="" selected="selected">Select Category</option>
 			      
     		</select>
@@ -24,8 +25,8 @@
  	  <div class="form-group">
   			<label class="col-md-4 control-label" for="selectbasic">Subcategory</label>
   	  <div class="col-md-4">
-            <select id="selectbasic" name="selectbasic1" class="form-control"  ng-model="subcategory" 
-            ng-options="sub.subtype for sub in available">
+            <select id="selectbasic" name="selectbasic1" class="form-control"  ng-model="form.subcategory" 
+            ng-options="sub.subtype for sub in available" >
             <option value="">Select Subcategory</option>
 			      
     		</select>
@@ -34,10 +35,10 @@
  </br>
  	 </br>
  	  <div class="form-group">
-  			<label class="col-md-4 control-label" for="selectbasic">Selectuser</label>
+  			<label class="col-md-4 control-label" for="selectbasic">User</label>
   	  <div class="col-md-4">
-            <select id="selectbasic" name="selectbasic" class="form-control" ng-model="selectuser" 
-            ng-options="user.firstName +' '+ user.lastName for user in productArray" >
+            <select id="selectbasic" name="selectbasic2" class="form-control" ng-model="form.selectuser" 
+            ng-options="user.firstName +' '+ user.lastName for user in productArray"  >
             <!-- user.firstName for user in dataArray  -->
              <option value="" selected="selected">Select User</option>
 			      
@@ -49,7 +50,11 @@
 <div class="form-group">
   <label class="col-md-4 control-label" for="filebutton">Images</label>
   <div class="col-md-4">
-    <input id="filebutton" name="filebutton" class="input-file" type="file" ng-model="images">
+    <input id="filebutton" name="filebutton" class="input-file" type="file" ng-model="form.images" image-change>
+
+    <span class="text"></span> <img class="preview" ng-src="{{imageStrings[$index]}}"/>
+
+    </div>
   </div>
 </div>
 </br>
@@ -57,7 +62,7 @@
 	</br> <!-- <button type="button" ng-model="button" class="btn btn-primary">Save</button> -->
 	</div class="form-group">
       <div class="col-lg-offset-2">
-          <button class="btn btn-success">    Save  </button>
+          <button type="submit" class="btn btn-success" >    Save  </button>
       </div>
       </div>
 </div>

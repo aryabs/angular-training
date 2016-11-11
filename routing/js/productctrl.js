@@ -1,16 +1,38 @@
 angular.module("myApp")
+    .directive('imageChange', function() {
+        return {
+            link: function(scope, ele) {
+                $(ele).on('change', function(e) {
+                    var files = e.target.files;
+                    angular.forEach(files, function(file, i) {
+                        var fileReader = new FileReader();
+                        fileReader.onload = function(event) {
+                            //console.log(fileReader.result);
+                            $(ele).next().append("<img src='" + fileReader.result + "'/>")
+                            scope.fileUrl = fileReader.result;
+
+
+                        };
+                        fileReader.readAsDataURL(file);
+                    });
+                });
+            }
+        }
+    })
     .controller('ProductController', function($scope) {
+        $scope.imageStrings = [];
         $scope.form = {};
 
         function getData() {
-            // getting data from local storage
+            // for populating select users drop down
             var productArray = localStorage.getItem('data');
             productArray = productArray ? JSON.parse(productArray) : [];
             $scope.productArray = productArray;
 
+
         }
         getData();
-
+        // console.log($scope.fileUrl);
 
         $scope.categoryArray = [{
             "id": "1",
@@ -53,7 +75,7 @@ angular.module("myApp")
         $scope.search = function() {
 
 
-            var id = $scope.category.id;
+            var id = $scope.form.category.id;
 
 
             $scope.available = [];
@@ -61,11 +83,39 @@ angular.module("myApp")
             angular.forEach($scope.subArray, function(value) {
 
 
-                if (value.id == $scope.category.id) {
+                if (value.id == $scope.form.category.id) {
                     $scope.available.push(value);
 
                 }
             });
         }
+
+        // $scope.save = function() {
+
+        //     var name = $scope.form.productname;
+        //     var pname = $scope.form.category.type;
+        //     var sname = $scope.form.subcategory.subtype;
+
+        // }
+
+
+
+        $scope.productformSubmit = function() {
+            $scope.form.image = $scope.fileUrl;
+
+            var product = $scope.form;
+            var pArray = localStorage.getItem('product');
+            pArray = pArray ? JSON.parse(pArray) : [];
+            pArray.push(product);
+            localStorage.setItem('product', JSON.stringify(pArray));
+
+            var retrievedData = JSON.parse(localStorage.getItem("product"));
+            console.log(retrievedData);
+
+
+        }
+
+
+
 
     });

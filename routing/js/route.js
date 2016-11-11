@@ -1,4 +1,4 @@
-var app = angular.module("myApp", ["ngRoute"]);
+var app = angular.module("myApp", ["ngRoute", "flow"]);
 
 app.config(function($routeProvider) {
     $routeProvider
@@ -20,4 +20,11 @@ app.config(function($routeProvider) {
             templateUrl: "views/products.html",
             controller: "ProductController"
         })
+        .when("/product listing", {
+            templateUrl: "views/productlist.html",
+            controller: "ProductlistController"
+        })
+
+
+
 });
