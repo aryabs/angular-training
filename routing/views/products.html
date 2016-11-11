@@ -1,5 +1,5 @@
 <h2>Products</h2>
-<form>
+<form >
 <div class="container">
 	<div class="form-group">
 	  <label class="col-md-4 control-label" for="textinput">Product name</label>  
@@ -13,7 +13,7 @@
  	  <div class="form-group">
   			<label class="col-md-4 control-label" for="selectbasic">Category</label>
   	  <div class="col-md-4">
-            <select id="selectbasic" name="selectbasic" class="form-control" ng-model="category" ng-options="user.type for user in categoryArray">
+            <select id="selectbasic" name="selectbasic" class="form-control" ng-model="category" ng-options="user.type for user in categoryArray" ng-change="search()">
             <option value="" selected="selected">Select Category</option>
 			      
     		</select>
@@ -24,9 +24,10 @@
  	  <div class="form-group">
   			<label class="col-md-4 control-label" for="selectbasic">Subcategory</label>
   	  <div class="col-md-4">
-            <select id="selectbasic" name="selectbasic" class="form-control"  ng-model="subcategory">
-			      <option value="1">Option one</option>
-			      <option value="2">Option two</option>
+            <select id="selectbasic" name="selectbasic1" class="form-control"  ng-model="subcategory" 
+            ng-options="sub.subtype for sub in available">
+            <option value="">Select Subcategory</option>
+			      
     		</select>
   </div>
 </div>
@@ -36,7 +37,7 @@
   			<label class="col-md-4 control-label" for="selectbasic">Selectuser</label>
   	  <div class="col-md-4">
             <select id="selectbasic" name="selectbasic" class="form-control" ng-model="selectuser" 
-            ng-options="user.firstName +' '+ user.lastName for user in dataArray" >
+            ng-options="user.firstName +' '+ user.lastName for user in productArray" >
             <!-- user.firstName for user in dataArray  -->
              <option value="" selected="selected">Select User</option>
 			      
@@ -56,7 +57,7 @@
 	</br> <!-- <button type="button" ng-model="button" class="btn btn-primary">Save</button> -->
 	</div class="form-group">
       <div class="col-lg-offset-2">
-          <button class="btn btn-success">               Save  </button>
+          <button class="btn btn-success">    Save  </button>
       </div>
       </div>
 </div>
